@@ -40,7 +40,6 @@ x_I = np.append(x_I,eind)
 I_func = interpolate.interp1d(x_I,I)
 
 x = np.arange(0.0,Loa,0.05)
-print('hello world')
 
 p = p_func(x)
 G = G_func(x)
@@ -54,7 +53,6 @@ M = integrate.cumtrapz(x,V,initial=0)
 #phi=(integrate.cumtrapz(np.delete(x,index),np.delete(M,index),initial=0))/(E_staal*I)
 
 
-print('hello world')
 
 
 
