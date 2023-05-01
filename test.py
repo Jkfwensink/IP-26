@@ -54,7 +54,7 @@ M = integrate.cumtrapz(x,V,initial=0)
 #phi=(integrate.cumtrapz(np.delete(x,index),np.delete(M,index),initial=0))/(E_staal*I)
 
 
-
+print('hello world')
 
 
 
@@ -103,5 +103,4 @@ def momentlijn():
     plt.show()
     return momentlijn
 
-
-
+momentlijn()
