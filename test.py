@@ -40,7 +40,7 @@ x_I = np.append(x_I,eind)
 I_func = interpolate.interp1d(x_I,I)
 
 x = np.arange(0.0,Loa,0.05)
-print(ldol)
+print('hello world')
 
 p = p_func(x)
 G = G_func(x)
