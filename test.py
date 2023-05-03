@@ -8,6 +8,7 @@ E_staal=210000E6
 rho_water = 1.025E3
 g = 9.811
 df = pd.read_excel("IP.xlsx")
+
 df = df.round(4)
 nul = np.zeros(1)
 Loa= df.iloc[0,1]
@@ -48,9 +49,9 @@ I=np.delete(I_func(x),index)
 
 q= p+G
 
-V = integrate.cumtrapz(x,q,initial=0)
-M = integrate.cumtrapz(x,V,initial=0)
-#phi=(integrate.cumtrapz(np.delete(x,index),np.delete(M,index),initial=0))/(E_staal*I)
+V = integrate.cumtrapz(q,x,initial=0)
+M = integrate.cumtrapz(V,x,initial=0)
+phi=(integrate.cumtrapz(np.delete(x,index),np.delete(M,index),initial=0))/(E_staal*I)
 
 
 
@@ -101,4 +102,3 @@ def momentlijn():
     plt.show()
     return momentlijn
 
-momentlijn()
